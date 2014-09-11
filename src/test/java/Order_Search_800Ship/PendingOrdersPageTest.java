@@ -189,9 +189,8 @@ public class PendingOrdersPageTest {
 		Collections.sort(webList);
 		// Click on name of column to sort column in ASC order
 		driver.findElement(
-				By.xpath("/html/body/div[2]/div[3]/form[2]/div/div/div[3]/table/thead/tr/th[3]"))
-				.click();
-
+				By.xpath(".//*[@id='CollapseTable_wrapper']/div[3]/table/thead/tr/th[3]")).click();
+		
 		// find all elements in sorted column and add them to List<WebElement>
 		List<WebElement> lists1 = driver.findElements(By
 				.xpath("/html/body/div[2]/div[3]/form[2]/div/div"
@@ -1564,7 +1563,7 @@ public class PendingOrdersPageTest {
 	// Test verifies that when user checked/unchecked check box Show Package
 	// details on the top, the check box Show Package on the bottom is
 	// checked/unchecked and vice versa
-	////@Ignore
+	//@Ignore
 	@Test
 	public void test_2_1_00025() {
 		elem.login(userName, password, driver, textExpected, expectedUrl);

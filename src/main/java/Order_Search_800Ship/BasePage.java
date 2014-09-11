@@ -25,10 +25,8 @@ public class BasePage {
 				By.xpath("/html/body/form/div/div[2]/div[2]/div/button"))
 				.submit();
 
-		assertEquals(textExpected,
-				driver.findElement(By.xpath("/html/body/div[2]/header/h5/a"))
-						.getText());
-		
+		assertEquals(textExpected,driver.findElement(By.xpath("/html/body/div[2]/header/h5/a")).getText());
+				
 		assertEquals(expectedUrl, driver.getCurrentUrl());
 		
 	}
